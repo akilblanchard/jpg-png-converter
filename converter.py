@@ -8,11 +8,11 @@ from PIL import Image
 image_folder = sys.argv[1]
 output_folder = sys.argv[2]
 
-#check if new/ exists, if not create it
+#check if output folder/ exists, if not create it
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)
 
-#loop through pokedex and convert images to png
+#loop through image folder and convert images to png
 for i in os.listdir(image_folder):
     img = Image.open(f'{image_folder}{i}')
     clean_name = os.path.splitext(i)[0]
